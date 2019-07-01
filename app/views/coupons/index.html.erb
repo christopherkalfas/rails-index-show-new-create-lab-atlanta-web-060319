@@ -1,0 +1,16 @@
+<h1>All Coupons</h1>
+<p>Your Stores</p>
+<ul>
+<% @coupons.each do |coupon| %>
+<li> <%= coupon.store %>
+</li>
+<% end %>
+<p>Your Coupons</p>
+<% @coupons.each do |coupon|%>
+<li><%= coupon.coupon_code %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "Add New Coupon", new_coupon_path %>
+
